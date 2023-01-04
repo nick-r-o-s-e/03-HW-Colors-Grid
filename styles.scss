@@ -1,0 +1,84 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  * {
+    box-sizing: border-box;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  margin: 0;
+}
+
+.field {
+  height: 100vmax;
+  display: grid;
+  grid-template: "header menu menu menu" 1fr //6.7vh
+    "hero hero hero hero" 8fr //54.6vh
+    "main main . image" 2fr //13.4vh
+    "main main . extra" 2fr //13.4vh
+    "banner banner banner banner " 2fr / 1fr 1fr 1fr 1fr;
+  div {
+    h1 {
+      display: inline;
+      align-self: center;
+    }
+    display: flex;
+    place-content: center center;
+  }
+}
+
+@media (max-width: 600px) {
+  .field {
+    grid-template: 
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .field { 
+    grid-template: 
+    "header header header header" 1fr
+    "hero hero hero hero" 4fr
+    "menu main main main" 1fr
+    "menu main main main" 1fr
+    "menu banner banner banner" 1fr
+    "menu extra extra image" 1fr / 1fr 1fr 1fr 1fr
+    
+
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: #0f1629;
+}
+.menu {
+  grid-area: menu;
+  background-color: #ef3c4f;
+}
+.hero {
+  grid-area: hero;
+  background-color: #4c86c6;
+}
+.main {
+  grid-area: main;
+  background-color: #24344b;
+}
+.image {
+  color: #000;
+  grid-area: image;
+  background-color: #c1e4e6;
+}
+.extra {
+  color: #000;
+  grid-area: extra;
+  background-color: #4dbd97;
+}
+.banner {
+  color: #000;
+  grid-row: span 2;
+  grid-area: banner;
+  background-color: #ffd169;
+}
